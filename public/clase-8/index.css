@@ -6,6 +6,7 @@
 main {
   max-width: 1200px;
   margin: 0 auto;
+  border-bottom: 1px solid #dddd;
 }
 
 .hero {
@@ -21,4 +22,59 @@ main {
 }
 .info {
   align-self: center;
+}
+.h1 {
+  font-size: 50px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: black;
+  margin-top: 100px;
+}
+.p-1 {
+  font-size: 18px;
+  color: gray;
+  font-family: roboto medium;
+  margin-top: 50px;
+}
+
+.button-1 {
+  width: 200px;
+  height: 50px;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.dishes {
+  margin: 100px 0;
+}
+
+.dishes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 200px));
+  justify-content: center;
+  grid-auto-rows: 1fr;
+  gap: 20px;
+}
+
+.dishes-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dishes-item-big {
+  grid-area: 1 / 1 / 3 / 3;
+}
+.h2 {
+  margin-bottom: 50px;
+  font-size: 25px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
 }
