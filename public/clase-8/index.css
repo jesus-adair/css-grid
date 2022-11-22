@@ -11,8 +11,9 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: minmax(300px, 2fr) 3fr;
   grid-auto-rows: 550px;
+  border-bottom: 1px solid;
 }
 
 .hero-image {
@@ -57,7 +58,7 @@ main {
 
 .dishes-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(150px, 200px));
+  grid-template-columns: repeat(auto-fit, minmax(75px, 200px));
   justify-content: center;
   grid-auto-rows: 1fr;
   gap: 20px;
@@ -93,7 +94,7 @@ main {
   gap: 25px;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(5, minmax(100px, 250px));
+  grid-template-columns: repeat(auto-fit, 150px);
 }
 
 .menu-grid-item {
@@ -106,4 +107,18 @@ main {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: minmax(300px, 500px);
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-image {
+    display: none;
+  }
+  .dishes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(75px, 100px));
+  }
 }
